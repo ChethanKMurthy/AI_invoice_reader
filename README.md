@@ -23,3 +23,4 @@
 
 ## 📂 Project Structure
 
+Invoice Extractor/ ├── main.py # Main script to run the extraction ├── util.py # Utility functions for extraction ├── .env # Environment file for API keys ├── requirements.txt # Python package dependencies └── README.md # Project documentation
