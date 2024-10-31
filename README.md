@@ -23,4 +23,96 @@
 
 ## 📂 Project Structure
 
-Invoice Extractor/ ├── main.py # Main script to run the extraction ├── util.py # Utility functions for extraction ├── .env # Environment file for API keys ├── requirements.txt # Python package dependencies └── README.md # Project documentation
+Invoice Extractor/ ├── main.py # Main script to run the extraction 
+├── util.py # Utility functions for extraction
+├── .env # Environment file for API keys
+├── requirements.txt # Python package dependencies 
+└── README.md # Project documentation
+
+
+## ⚙️ Setup and Installation
+
+### Prerequisites
+
+Ensure you have Python 3.9+ installed on your system. Install dependencies with:
+
+```bash
+pip install -r requirements.txt
+
+API Key Setup
+Generate an OpenAI API Key: Get your API Key here.
+
+Create a .env File: In the project root, create a .env file and add your API key:
+OPENAI_API_KEY=your_openai_api_key_here
+
+unning the Project
+bash
+Copy code
+python main.py
+📝 Usage
+Place the PDF invoices you want to extract data from in the same directory or specify their path.
+Run the main.py script, which will process the PDF files, extract structured information, and store it in a Pandas DataFrame.
+Example output:
+
+plaintext
+Copy code
+Processing invoice.pdf
+{
+  'Invoice no': '12345',
+  'Description': 'Consulting Services',
+  'Quantity': '1',
+  'Date': '01/01/2024',
+  'Unit Price': '500.00',
+  'Amount': '500.00',
+  'Total': '500.00',
+  'Email': 'client@example.com',
+  'Phone Number': '1234567890',
+  'Address': '123 Main St, Anytown, USA'
+}
+📊 Data Extraction Workflow
+Load and Split Text: PDFs are loaded, and text is extracted from each page.
+Prompt Preparation: Text data is fed to OpenAI's GPT-4 with a specific prompt designed to pull the necessary fields.
+Structured Output: The extracted data is processed into a structured format, ideal for further analysis.
+🎨 Visual Examples
+
+🔐 Security
+API keys are stored securely using environment variables in the .env file. Ensure you do not share or expose this file in public repositories.
+
+🐛 Troubleshooting
+Environment Variable Issues: Make sure the .env file is in the root directory.
+OpenAI API Errors: Check your API key validity and OpenAI usage limits.
+🤝 Contributing
+Contributions are welcome! Please fork this repository and create a pull request to propose changes.
+
+Fork the project.
+Create a new branch (git checkout -b feature/AmazingFeature).
+Commit your changes (git commit -m 'Add some AmazingFeature').
+Push to the branch (git push origin feature/AmazingFeature).
+Open a pull request.
+📝 License
+Distributed under the MIT License. See LICENSE for more information.
+
+📬 Contact
+Feel free to reach out at Your Email.
+
+Enjoy the project! 😊
+
+markdown
+Copy code
+
+### Important Notes
+- **Replace placeholders** like `your_openai_api_key_here` with relevant values.
+- Add your own sample images or screenshots in the `Visual Examples` section to make it even more engaging.
+  
+This should make your GitHub project clear, visually appealing, and easy for others to understand and contribute to!
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check important info.
+
