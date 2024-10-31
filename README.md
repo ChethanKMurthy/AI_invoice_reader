@@ -1,3 +1,7 @@
+Started as a hobby project where i stumbled upon the use of Langchains to extract data for a Hackathon.
+
+
+
 # 🧾 Invoice Data Extractor
 
 ![Project Status](https://img.shields.io/badge/Status-Active-brightgreen) ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green)
@@ -30,6 +34,8 @@ Invoice Extractor/ ├── main.py # Main script to run the extraction
 └── README.md # Project documentation
 
 
+
+
 ## ⚙️ Setup and Installation
 
 ### Prerequisites
@@ -38,24 +44,23 @@ Ensure you have Python 3.9+ installed on your system. Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
-
+```
 API Key Setup
-Generate an OpenAI API Key: Get your API Key here.
-
-Create a .env File: In the project root, create a .env file and add your API key:
+1.Generate an OpenAI API Key: Get your API Key here.
+2.Create a .env File: In the project root, create a .env file and add your API key:
+```bash
 OPENAI_API_KEY=your_openai_api_key_here
+```
 
-unning the Project
-bash
-Copy code
-python main.py
+Running the Project
+```
+streamlit run main.py
+```
 📝 Usage
-Place the PDF invoices you want to extract data from in the same directory or specify their path.
-Run the main.py script, which will process the PDF files, extract structured information, and store it in a Pandas DataFrame.
-Example output:
+1.Place the PDF invoices you want to extract data from in the same directory or specify their path.
+2.Run the main.py script, which will process the PDF files, extract structured information, and store it in a Pandas DataFrame.
 
-plaintext
-Copy code
+Example output:
 Processing invoice.pdf
 {
   'Invoice no': '12345',
@@ -69,6 +74,8 @@ Processing invoice.pdf
   'Phone Number': '1234567890',
   'Address': '123 Main St, Anytown, USA'
 }
+
+
 📊 Data Extraction Workflow
 Load and Split Text: PDFs are loaded, and text is extracted from each page.
 Prompt Preparation: Text data is fed to OpenAI's GPT-4 with a specific prompt designed to pull the necessary fields.
@@ -81,30 +88,6 @@ API keys are stored securely using environment variables in the .env file. Ensur
 🐛 Troubleshooting
 Environment Variable Issues: Make sure the .env file is in the root directory.
 OpenAI API Errors: Check your API key validity and OpenAI usage limits.
-🤝 Contributing
-Contributions are welcome! Please fork this repository and create a pull request to propose changes.
-
-Fork the project.
-Create a new branch (git checkout -b feature/AmazingFeature).
-Commit your changes (git commit -m 'Add some AmazingFeature').
-Push to the branch (git push origin feature/AmazingFeature).
-Open a pull request.
-📝 License
-Distributed under the MIT License. See LICENSE for more information.
-
-📬 Contact
-Feel free to reach out at Your Email.
-
-Enjoy the project! 😊
-
-markdown
-Copy code
-
-### Important Notes
-- **Replace placeholders** like `your_openai_api_key_here` with relevant values.
-- Add your own sample images or screenshots in the `Visual Examples` section to make it even more engaging.
-  
-This should make your GitHub project clear, visually appealing, and easy for others to understand and contribute to!
 
 
 
@@ -114,5 +97,8 @@ This should make your GitHub project clear, visually appealing, and easy for oth
 
 
 
-ChatGPT can make mistakes. Check important info.
+
+
+
+
 
